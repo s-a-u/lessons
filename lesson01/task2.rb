@@ -1,5 +1,7 @@
 puts "Введите основание треугольника"
-a = gets
+bottom = gets
+
 puts "Введите высоту треугольника"
-h = gets
-puts "Площадь треугольника равна #{a.to_i * h.to_i / 2.00}"
+height = gets
+
+puts "Площадь треугольника #{bottom.to_i * height.to_i / 2.0}"
