@@ -7,15 +7,6 @@
   end
 end
 
-p fib.take(11) # => [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+p fib.take(11) 
    
-
-   i=1
-  while i<=100
- 
-   
-   i+= 1
-end
-
-puts i
-       
+#not mine bat i like this)
