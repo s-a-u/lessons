@@ -1,57 +1,39 @@
 
-day=(1..31).to_a
 
 puts "Введите число"
+day=(1..31).to_a
 day = gets.chomp.to_i
 
-if 31<day && day<0
-	 puts "Неправильная дата"
-else
 puts "#{day}"
-end
-
 puts "Введите месяц "
-_month={1=>31,2=>28,3=>31,4=>0,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31}
-
-hight_year_momths={1=>31,2=>29,3=>31,4=>0,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31}
-
+  month={1=>31,2=>29,3=>31,4=>30,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31}
+month.each {|k, v| }
 month = gets.chomp.to_i
 
- 
-
-if( 12<month && month<0)
-	 puts "Нет такого месяца"
-else
-	puts _month.select {|k,v| k ==month}
-end
-
-
-	while month >= 0 do
-	days = day + month{|v|
-		month = month - 1
-	}
 	
-end
-
-puts days
-
 puts "Введите год"
 year = gets.chomp.to_i
+puts "#{year}"
 
-year=(2000..2050).to_a
 
-hight_year=(2000..2050).to_a
-index = 4
-while index<50 do
-	index+=4
-	
+days = 0 # счётчик колличества дней изначально равен нулю
+i = 1 # первый месяц
+while i < month do  # пробегаем от первого до указанного месяца (не включительно)
+  days = days + month[i]  # прибавляем колличество дней в месяце к общему коллчеству
+  i = i + 1 # берём следующий месяц
+days = days + day # добавляем день даты к общему колличеству дней
+puts days
 end
-puts sum=days+month
-puts hight_year.select {|k,v| k ==year}
+puts "#{month}"
 
-#if( 2500<year && year<1000)
-#	 puts "Неправильная дата"
-#else
-#end
 
-puts "#{day}#{month}#{year}"
+# Высокосный год - это год, который делиться без остатка на 4 (там есть ещё условия, но мы их опустим). в коде это выглядит так:
+if year % 4 == 0
+  # год высокосный
+  month={1=>31,2=>29,3=>31,4=>30,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31}
+else
+  month={1=>31,2=>28,3=>31,4=>30,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31}
+end
+sum = 0
+month.each {|k, v| sum += v}
+puts sum
