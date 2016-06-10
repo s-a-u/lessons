@@ -1,30 +1,32 @@
+products ={}
 
- puts "Введите название товара"
+loop do
+	 puts "Введите название товара"
+
+  name = gets.chomp
+   break if name == "стоп"	
  
-product = Hash.new(product)
- product = gets.chomp
-  
-puts product
-puts "Введите цену товара"
-price=gets.chomp.to_f
+  puts "Введите цену товара"
+  amount=gets.to_f
 
- puts "Введите количество товара"
- amount=gets.chomp.to_f
+  puts "Введите количество товара"
+  price=gets.to_f
 
-product = Hash.new
-product.each_with_index do|item, value|
-    product[price] = amount+1  
+products[name] ={
+	amount: amount,
+	price: price
+}
+end
 
+puts products
 
- hash = {price: price, amount: amount} 
-        sum = value[:price] * value[:amount]
-  puts sum
+products.each do |product,data|
+	puts "#{product} = #{data[:amount] * data[:price]}"
+end	
 
-  end
-  
+sum = 0
+products.each do |product,data|
+sum += data[:amount] * data[:price]
+end	
 
- puts "hash  #{product}"   
-
- puts "product  #{product.select{|item, index| }}"
-    
- 
+puts "Сумма всех покупок = #{sum}"

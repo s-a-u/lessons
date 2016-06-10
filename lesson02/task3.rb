@@ -8,5 +8,11 @@
 end
 
 p fib.take(11) 
-   
-#not mine bat i like this)
+ # интересное решение  
+ 
+   fiba =[1,1]
+while (fiba[-1] +fiba[-2])<=100
+ fiba<< fiba[-1] +fiba[-2]
+end
+
+puts fiba
