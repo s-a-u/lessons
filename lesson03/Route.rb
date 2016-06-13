@@ -1,25 +1,34 @@
 class Route
-	attr_accessor :station
-	attr_accessor :current_station
-	attr_accessor :route
+	attr_reader :first_station
+	attr_reader :latest_station
 
-	def       initialize(station=0,current_station=0,train_number=0)
-	 	@station=station,@current_station=current_station,
-	 	@train_number=train_number)
-	 	
-	def begin_station derive_station
-        @station
-	end	
+	attr_accessor :stations
+	attr_accessor :
+
+	def initialize(first_station, latest_station,stations=[],new_station=0)
+      @stations = [first_station, latest_station]
+      @new_station=new_station
+    end
+	def 
+	 	station_list=[ ]
+	 	puts "Введите станцию отправления"
+	 	first_station = gets.chomp
+
+        puts "Введите станцию прибтия"
+        latest_station = gets.chomp
+   
+	end
+		
 	def intermediate_station
-		@current_station
+		@new_station
 	end	
 	def add_station
-        @current_station
+        @stations.insert(-2, new_station)
 	end
 
 	def delete_station
-		@current_station
-	end
+        @stations.delete(-2, new_station)
+    end
 	def show_all_station
-       @current_station
-	end	
+	   @stations
+    end	
