@@ -1,30 +1,32 @@
 class RailwayStation
 	
 	attr_accessor :stations
-	attr_accessor :route
-    attr_accessor :train
+	attr_reader :name_station
+    attr_accessor :train_pass
+    attr_accessor :train_cargo
 
-	def       initialize(stations=[],train=[])
+	def       initialize(stations=[],trains=[],train_cargo,train_pass, name_station)
 	 	@stations=[],
-	 	@train=[],
-	 	@route
-	 	end
+	 	@trains=[],
+	 	@train_pass = train_pass
+	 	@train_cargo = train_cargo
+	 	@name_station = name_station
+	 end
 
-def get_one_train
-	@route.stations[@station_index].add_train(self)
-@train_number
+    def get_one_train
+	  trains<<train_cargo
+    end
+    def show_type_all_trains
+	
+	  puts @trains.select(train_cargo)
+	  puts @trains.select(train_pass)
+    end
+    def departure_one_train
+	  @trains.delete.
+    end	
+    def show_all_trains_this_moment
+    if departure_one_train
+    end	
+       puts @trains
+    end	
 end
-def show_type_all_trains
-	cargo /passenger
-	puts @type.select(cargo)
-	puts @type.select(passenger)
-end
-def departure_one_train
-	departure_one_train
-	@route.stations[@station_index].delete_train(self)
-end	
-def show_all_trains_this_moment
-  if departure_one_train
-  end	
-   puts @trains
-end	
