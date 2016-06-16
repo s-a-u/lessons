@@ -1,20 +1,21 @@
 class Train
-	attr_accessor :speed
-	attr_reader :train_number
+	
+	attr_reader :number
 	attr_reader :type
 	attr_accessor :container
-	attr_accessor :route
+	attr_accessor :speed
+	attr_accessor :station_index
 
- def initialize(train_number,type,container=1)
+  def initialize(number,type,container=1)
  	 
-  	@train_number = train_number
+  	@number = number
   	@type =type
  	  @container =container
  	  @speed = 0
-  end
+ 	end
 
-  def train_number
-	 puts "#{@train_number}"
+  def number
+	 puts "#{@number}"
   end	 
   def type	  
   	@type
@@ -24,12 +25,14 @@ class Train
 	  puts "#{@container}"
   end
   def del_container
-	  self.speed =0
-	  @container.delete(-1)
+	  if @speed == 0
+	  end	
+	  @container-=1
   end
   def add_container
-  	self.speed =0
-	  @container.delete(-1)
+  	if @speed ==0
+  	end	
+	  @container +=1
   end
   def go
 		@speed =70
@@ -41,20 +44,20 @@ class Train
 	  self.speed =0
   	puts"stop"
   end
-  def route(route)
-	  @station_index = 0
-    @route.stations[@station_index].add_train(self)
-  end
-  def go_to_next_station(station)
-	  @station_index += 1
+  def add_route(route)
+   @route = route
+   @station_index = 0
+   @route.stations[@station_index]
+   puts @station_index
 	end
-  def intermediate_station
-		@new_station
-  end
-  def change_station_at_route
-    @route.stations.insert(-2, new_station)
-  end
+  def next_station
+  	@route.stations[@station_index].depart_train(self)
+  	@station_index += 1
+  	puts @station_index
+	  @route.stations[@station_index].add_train(self)
+	end
   def show_station
-    puts 	@route.stations[@station_index].select(first_station,new_station,latest_station)
+		@route.stations
   end
+  
 end
