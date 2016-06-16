@@ -11,14 +11,13 @@ class RailwayStation
       @trains<<train
   	end
     def show_type_trains
-      @trains.each {|train| puts train.type}
-	  puts @trains.select{|train| train.type == :pass }
+      puts @trains.select{|train| train.type == :pass }
+	  puts @trains.select{|train| train.type == :cargo }
 	end
-    def depart_train(train)
+	def depart_train(train)
         @trains.delete(train)
     end	
-    def show_trains(trains)
-      puts @trains.select(t3)
+    def show_trains
       @trains.each {|train| puts train}
     end	
    

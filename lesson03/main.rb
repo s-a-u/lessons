@@ -8,7 +8,7 @@ load 'RailwayStation.rb'
 k = RailwayStation.new(:Kiev,t1)
 m = RailwayStation.new(:Minsk,t2)
 puts k.trains,m.trains
-puts k.type=t1.type
+
 load 'Route.rb'
 r = Route.new(:Minsk,:Kiev)
 puts r

@@ -25,14 +25,15 @@ class Train
 	  puts "#{@container}"
   end
   def del_container
-	  if @speed == 0
+	  if speed == 0
 	  end	
 	  @container-=1
   end
   def add_container
-  	if @speed ==0
-  	end	
-	  @container +=1
+  	if speed == 0
+ 	  @container +=1
+ 	else go
+ 	end
   end
   def go
 		@speed =70
@@ -42,12 +43,11 @@ class Train
   end
   def stop
 	  self.speed =0
-  	puts"stop"
   end
   def add_route(route)
    @route = route
    @station_index = 0
-   @route.stations[@station_index]
+   @route.stations[@station_index].add_train(self)
    puts @station_index
 	end
   def next_station
