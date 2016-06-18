@@ -15,7 +15,6 @@ class Route
 	  @stations.delete(station)
     end
     def show_all_station
-	  puts  @stations
 	  @stations.each {|stations| puts stations}
     end
     def current_station

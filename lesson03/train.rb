@@ -13,9 +13,8 @@ class Train
  	  @container =container
  	  @speed = 0
  	end
-
   def number
-	 puts "#{@number}"
+	  puts "#{@number}"
   end	 
   def type	  
   	@type
@@ -26,14 +25,17 @@ class Train
   end
   def del_container
 	  if speed == 0
-	  end	
-	  @container-=1
+	  	  @container-=1
+	  else
+	  	go
+	  end
   end
   def add_container
   	if speed == 0
- 	  @container +=1
- 	else go
- 	end
+ 	      @container +=1
+ 	  else 
+ 	  	go
+ 	  end
   end
   def go
 		@speed =70
@@ -45,19 +47,21 @@ class Train
 	  self.speed =0
   end
   def add_route(route)
-   @route = route
-   @station_index = 0
-   @route.stations[@station_index].add_train(self)
-   puts @station_index
-	end
+    @route = route
+    @station_index = 0
+    @route.stations[@station_index].add_train(self)
+  end
   def next_station
   	@route.stations[@station_index].depart_train(self)
   	@station_index += 1
-  	puts @station_index
-	  @route.stations[@station_index].add_train(self)
-	end
-  def show_station
-		@route.stations
+  	@route.stations[@station_index].add_train(self)
   end
-  
+  def show_station    
+    puts	@route.stations[@station_index-1]
+    puts	@route.stations[@station_index]
+    puts	@route.stations[@station_index+1]
+ 	end
+  def to_s
+    "Поезд №#{@number} тип: #{@type}(#{@container} вагонов)"
+  end
 end
