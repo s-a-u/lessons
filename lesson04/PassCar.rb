@@ -1,0 +1,2 @@
+class PassCar < Car
+end
