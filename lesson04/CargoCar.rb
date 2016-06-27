@@ -1,6 +1,6 @@
 class CargoCar < Car
   def initialize
-  	super
+    super
   end
   def type
     :cargo
