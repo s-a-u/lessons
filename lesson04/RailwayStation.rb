@@ -14,7 +14,7 @@ class RailwayStation
 	  puts @trains.select{|train| train.type == :cargo }
 	end
 	def depart_train(train)
-    @trains.delete(train)
+      @trains.delete(train)
   end	
   def show_trains
     @trains.each {|train| puts train}
