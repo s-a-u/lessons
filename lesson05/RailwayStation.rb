@@ -1,5 +1,5 @@
 class RailwayStation
-	attr_reader :station
+  attr_reader :station
   attr_accessor :trains
   @@instances = []
   class << self
@@ -7,20 +7,20 @@ class RailwayStation
       @@instances 
     end 
   end
-	def   initialize(station)
-	  @station = station
-	  @trains =[]
+  def   initialize(station)
+    @station = station
+    @trains =[]
     @@instances << @station 
-	end 
+  end 
   def add_train(train)
     @trains << train
   end
   def show_type_trains
     puts @trains.select{|train| train.type == :pass }
-	  puts @trains.select{|train| train.type == :cargo }
-	end
-	def depart_train(train)
-      @trains.delete(train)
+    puts @trains.select{|train| train.type == :cargo }
+  end
+  def depart_train(train)
+    @trains.delete(train)
   end	
   def show_trains
     @trains.each {|train| puts train}
