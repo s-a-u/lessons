@@ -9,7 +9,7 @@ class Train
   @@numbers = []
   class << self
     def find(number)
-     puts @@numbers.each{|number| puts number == number}
+      @@numbers.each{|number| puts number == number}
     end
   end
   def initialize(number)
