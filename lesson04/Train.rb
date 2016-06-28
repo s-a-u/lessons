@@ -1,22 +1,33 @@
 class Train
+<<<<<<< HEAD
 	
 	attr_reader :number
 	attr_accessor :speed
 	attr_accessor :station_index
+=======
+  attr_reader :number
+  attr_accessor :speed
+  attr_accessor :station_index
+>>>>>>> 8fd81e0ec3a9efb5e094caf6c40a5d914a2751d5
   attr_accessor :cars
   def initialize(number)
- 	 
-  	@number = number
-  	@cars = []
+    @number = number
+    @cars = []
     @speed = 0
- 	end
+  end
   def number
-	  puts "#{@number}"
+    puts "#{@number}"
   end	 
   def add_car(car)
+<<<<<<< HEAD
   	if speed == 0
       @cars << car if self.type == car.type
  	  end
+=======
+    if speed == 0
+      @cars << car if self.type == car.type
+    end
+>>>>>>> 8fd81e0ec3a9efb5e094caf6c40a5d914a2751d5
   end
   def del_car(car)
     if speed == 0
@@ -42,9 +53,15 @@ class Train
   end
   def next_station
     return if @route.stations[@station_index+1] == nil
+<<<<<<< HEAD
   	  @route.stations[@station_index].depart_train(self)
   	  @station_index += 1
   	  @route.stations[@station_index].add_train(self)
+=======
+      @route.stations[@station_index].depart_train(self)
+      @station_index += 1
+      @route.stations[@station_index].add_train(self)
+>>>>>>> 8fd81e0ec3a9efb5e094caf6c40a5d914a2751d5
   end
   def show_station  
     if @route

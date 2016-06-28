@@ -18,6 +18,6 @@ class Route
 	  @stations.each {|stations| puts stations}
     end
     def current_station
-	  puts @new_station
+		puts @new_station
 	end		
 end
