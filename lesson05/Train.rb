@@ -8,20 +8,18 @@ class Train
   attr_accessor :cars
   @@numbers = []
   class << self
-    def find(number)
-      @@numbers.each{|number| puts number == number}
+    def find(numb)
+      @@numbers.select{|k| k.number == (numb) }
     end
   end
   def initialize(number)
  	 	@number = number
   	@cars = []
     @speed = 0
-    @@numbers << number
-
- 	end
-  
+    @@numbers << self
+  end
   def number
-	  puts "#{@number}"
+	  @number
   end	 
   def add_car(car)
   	if speed == 0

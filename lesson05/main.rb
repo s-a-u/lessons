@@ -9,13 +9,13 @@ load 'CargoCar.rb'
 
 t1 =PassangerTrain.new(:d111)
 t2 = CargoTrain.new(:dsa123)
- 
- puts Train.find(:dsa123)
-
+  
 t2.add_car(CargoCar.new)
 t2.add_car(CargoCar.new)
 t1.add_car(PassCar.new)
 t2.del_car(CargoCar.new)
+
+puts Train.find(:dsa123)
 
 t2.show_cars
 t1.show_cars
