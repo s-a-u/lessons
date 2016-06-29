@@ -1,6 +1,7 @@
 
 class Train
   include Fabricant
+  extend Fabricant
   attr_reader :number
   attr_accessor :speed
   attr_accessor :station_index
@@ -8,7 +9,7 @@ class Train
   @@numbers = []
   class << self
     def find(numb)
-      @@numbers.select{|k| k.number == (numb) }
+      @@numbers.select{|k| k.number == numb}[0]
     end
   end
   def initialize(number)
