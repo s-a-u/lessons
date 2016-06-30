@@ -23,7 +23,7 @@ class Train
   end	 
   def add_car(car)
     if speed == 0
-      @cars << car 
+      @cars << car if self.type == car.type
     end
   end
   def del_car(car)
