@@ -1,7 +1,7 @@
 
 class Train
   include Fabricant
-  extend Fabricant
+  
   attr_reader :number
   attr_accessor :speed
   attr_accessor :station_index
