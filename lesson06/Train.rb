@@ -3,9 +3,9 @@ class Train
   include Fabricant
   attr_accessor :number
   attr_accessor :speed
-  attr_accessor :station_index
+  attr_accessor :station_index 
   attr_accessor :cars
-  NUMBER_FORMAT = /[a-zA-Z\d]{3}\S?[a-zA-Z\d]{2}/
+  NUMBER_FORMAT = /^[a-zA-Z\d]{3}-?[a-zA-Z\d]{2}$/
   @@numbers = []
   class << self
     def find(numb)
@@ -28,10 +28,15 @@ class Train
   rescue
     false
   end
+  begin
   def add_car(car)
     if speed == 0
       @cars << car if self.type == car.type
     end
+  raise "wrong car type"  if @cars.each {|car| car.is_a?(Car)}#не работает
+  rescue RuntimeError => e #не знаю что это, оно не работает
+      puts e.inspect       # было в лекции
+  end
   end
   def del_car(car)
     if speed == 0
@@ -73,9 +78,7 @@ class Train
   end
   protected
   def validate!
-    raise "number can`t be nil" if number.nil?
-    raise "number should be at least 6 symbols" if @number.length < 5 
     raise "number has invalid format" if number !~ NUMBER_FORMAT
-    true
+      true
   end
 end

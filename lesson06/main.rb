@@ -7,19 +7,20 @@ load 'PassCar.rb'
 load 'CargoCar.rb'
 
 
-t1 =PassangerTrain.new(:d1111)
+t1 =PassangerTrain.new(:d11a2)
 t2 = CargoTrain.new(:dsa23)
   
 t2.add_car(CargoCar.new)
 t2.add_car(CargoCar.new)
-t1.add_car(PassCar.new)
+t2.add_car(PassCar.new)
 t2.del_car(CargoCar.new)
 
-puts Train.find(:dsa13).class
+puts Train.find(:d1111).class
 puts CargoTrain.find(:dsa23)
- t2.show_cars
-puts t1.valid?
 
+t2.show_cars
+
+puts t1.valid?
 
 load 'RailwayStation.rb'
 k = RailwayStation.new(:Kiev)
@@ -27,13 +28,14 @@ m = RailwayStation.new(:Minsk)
 d = RailwayStation.new(:Dnepr)
 h = RailwayStation.new(:Kharkov)
 puts RailwayStation.all_stations
-puts k.trains,m.trains
+
+puts k.class,m.class
 
 load 'Route.rb'
 r = Route.new(k,m)
 r.add_station(d)
 r.add_station(h)
-
+puts r.valid?
 t2.add_route(r)
 t2.next_station
 t2.next_station

@@ -14,6 +14,7 @@ class RailwayStation
   end 
   def add_train(train)
     @trains << train
+    validate!
   end
   def show_type_trains
     puts @trains.select{|train| train.type == :pass }
@@ -27,5 +28,9 @@ class RailwayStation
   end	
   def to_s
     "Станция #{@station} Поезд: #{@trains}"
+  end
+  def validate!
+    raise "train not Train" if !@trains.each {|train| train.is_a?(Train)} 
+    true
   end
 end
