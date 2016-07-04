@@ -7,7 +7,7 @@ load 'PassCar.rb'
 load 'CargoCar.rb'
 
 
-t1 =PassangerTrain.new(:d11a2)
+t1 =PassangerTrain.new('d11-a2')
 t2 = CargoTrain.new(:dsa23)
   
 t2.add_car(CargoCar.new)
@@ -36,6 +36,7 @@ r = Route.new(k,m)
 r.add_station(d)
 r.add_station(h)
 puts r.valid?
+
 t2.add_route(r)
 t2.next_station
 t2.next_station

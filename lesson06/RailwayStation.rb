@@ -20,7 +20,7 @@ class RailwayStation
     puts @trains.select{|train| train.type == :pass }
     puts @trains.select{|train| train.type == :cargo }
   end
-  def depart_train(train)
+  def depart_train(train)!
     @trains.delete(train)
   end	
   def show_trains
@@ -30,7 +30,7 @@ class RailwayStation
     "Станция #{@station} Поезд: #{@trains}"
   end
   def validate!
-    raise "train not Train" if !@trains.each {|train| train.is_a?(Train)} 
+   @trains.each {|train| raise "train not Train.class" if !train.is_a?(Train)}
     true
   end
 end

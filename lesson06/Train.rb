@@ -30,12 +30,12 @@ class Train
   end
   begin
   def add_car(car)
+    raise 'car is not Car.class' if !(car.is_a?(Car))
     if speed == 0
       @cars << car if self.type == car.type
     end
-  raise "wrong car type"  if @cars.each {|car| car.is_a?(Car)}#не работает
-  rescue RuntimeError => e #не знаю что это, оно не работает
-      puts e.inspect       # было в лекции
+  rescue RuntimeError => b
+      puts b.inspect       
   end
   end
   def del_car(car)
