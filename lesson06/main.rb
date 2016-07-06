@@ -8,7 +8,7 @@ load 'CargoCar.rb'
 
 
 t1 =PassangerTrain.new('d11-a2')
-t2 = CargoTrain.new(:dsa23)
+t2 = CargoTrain.new('ds3-q1')
   
 t2.add_car(CargoCar.new)
 t2.add_car(CargoCar.new)

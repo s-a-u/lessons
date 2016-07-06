@@ -16,8 +16,9 @@ class Train
     @number = number
     @cars = []
     @speed = 0
-    @@numbers << self
     validate!
+    @@numbers << self
+    
   end
   def number
     @number
@@ -34,8 +35,10 @@ class Train
     if speed == 0
       @cars << car if self.type == car.type
     end
+  def resc
   rescue RuntimeError => b
-      puts b.inspect       
+      puts b.inspect 
+  end          
   end
   end
   def del_car(car)
@@ -44,13 +47,13 @@ class Train
     end 
   end
   def show_cars
-   @cars.each {|car| puts car} 
+    @cars
   end
   def go
     @speed =70
   end
   def show_speed
-    puts "Current speed: #{@speed}"
+    @speed
   end
   def stop
     self.speed =0
@@ -79,6 +82,7 @@ class Train
   protected
   def validate!
     raise "number has invalid format" if number !~ NUMBER_FORMAT
+    raise "number not string" if number.empty?
       true
   end
 end
