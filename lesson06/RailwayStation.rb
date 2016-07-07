@@ -16,11 +16,11 @@ class RailwayStation
     @trains << train
     validate!
   end
-  def show_pass_trains
-    puts @trains.select{|train| train.type == :pass }
+  def pass_trains
+    @trains.select{|train| train.type == :pass }
   end
-  def show_cargo_trains
-    puts @trains.select{|train| train.type == :cargo }
+  def cargo_trains
+    @trains.select{|train| train.type == :cargo }
   end
   def depart_train(train)!
     @trains.delete(train)

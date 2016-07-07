@@ -18,12 +18,10 @@ class Train
     @speed = 0
     validate!
     @@numbers << self
-    
   end
   def number
     @number
   end	 
-  
   def valid?
     validate!
   rescue
@@ -82,7 +80,7 @@ class Train
   protected
   def validate!
     raise "number has invalid format" if number !~ NUMBER_FORMAT
-    raise "number not string" if number.empty?
+    raise "number not string" if !number.instance_of?(String)
       true
   end
 end

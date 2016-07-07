@@ -15,10 +15,10 @@ t2.add_car(CargoCar.new)
 t2.add_car(PassCar.new)
 t2.del_car(CargoCar.new)
 
-puts Train.find(:d1111).class
+puts Train.find('d11-a2').class
 puts CargoTrain.find(:dsa23)
 
-t2.show_cars
+puts t2.show_cars
 
 puts t1.valid?
 
