@@ -1,21 +1,22 @@
 class CargoCar < Car
-  attr_accessor :volume
+  attr_reader :number
+  attr_accessor :free_volume
+  attr_accessor :hold_vol
   def initialize(volume)
-    @volume = volume.to_i 
-   end
+    @free_volume = volume 
+    @hold_vol = 0
+    super
+ end
   def type
     :cargo
   end
   def occupy_vol(vol)
-    @vol = vol
-  end
-  def hold_vol
-    @vol
+    @hold_vol = vol
   end
   def free_vol
-    @volume =@volume - @vol
+    @free_volume = @free_volume - @hold_vol
   end
   def to_s
-  "Свободный объем #{@volume} (#{@vol} занятый объем)" 
+  "  #{@number} #{self.type} Свободный объем #{@free_volume} (#{@hold_vol} занятый объем)" 
   end
 end

@@ -30,22 +30,15 @@ class Train
   begin
   def add_car(car)
     raise 'car is not Car.class' if !(car.is_a?(Car))
-    if speed == 0
-      @cars << car if self.type == car.type
-    end
-  def resc
-  rescue RuntimeError => b
-      puts b.inspect 
-  end          
+      if speed == 0
+        @cars << car if self.type == car.type
+      end
   end
   end
   def del_car(car)
     if speed == 0
       @cars.delete(car)
     end 
-  end
-  def show_cars
-    @cars
   end
   def go
     @speed =70
@@ -75,7 +68,10 @@ class Train
     end
   end
   def to_s
-    "Поезд №#{@number} (#{@cars} вагонов)"
+    "Поезд №#{@number}, #{self.type} (#{@cars} вагонов)"
+  end
+  def car
+    yield(cars)
   end
   protected
   def validate!
@@ -83,4 +79,18 @@ class Train
     raise "number not string" if !number.instance_of?(String)
       true
   end
+  
 end
+
+# def  cars (car,&block)
+#   block.call(car)
+
+#   cars(abc)
+#   block.call(str) #вызывает блок и передает аргумент(str)
+#   yield(car)  #тоже что block.call
+# end
+#  def m(car,&block)
+#  if block_given? 
+#   yield(car)
+# else puts @cars
+# end

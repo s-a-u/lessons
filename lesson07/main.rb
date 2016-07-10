@@ -9,51 +9,49 @@ load 'cargo_car.rb'
 
 t1 =PassangerTrain.new('d11-a2')
 t2 = CargoTrain.new('ds3-q1')
-  
 t2.add_car(CargoCar.new(100))
 t2.add_car(CargoCar.new(100))
-t2.add_car(PassCar.new(40))
-t2.del_car(CargoCar.new(100))
+t1.add_car(PassCar.new(40))
 
-puts Train.find('d11-a2').class
-puts CargoTrain.find(:dsa23)
-
-puts t2.show_cars
- puts c1 = CargoCar.new(100)
-puts c1.occupy_vol(55)
-puts c1.free_vol
-puts c1.to_s
-puts p1 = PassCar.new(40)
-p1.occupy_seat
-p1.occupy_seat
-puts p1.hold_seats
-puts p1.free_seats
-puts p1
-
-puts t1.valid?
+Train.find('d11-a2').class
+CargoTrain.find('ds3-q1')
 
 load 'railway_station.rb'
 k = RailwayStation.new(:Kiev)
 m = RailwayStation.new(:Minsk)
 d = RailwayStation.new(:Dnepr)
 h = RailwayStation.new(:Kharkov)
-puts RailwayStation.all_stations
-
-puts k.class,m.class
+k.class
 
 load 'route.rb'
 r = Route.new(k,m)
 r.add_station(d)
 r.add_station(h)
-puts r.valid?
 
 t2.add_route(r)
 t2.next_station
-t2.next_station
-t2.fabricant
-
 t2.install_fabricant(:GM)
-puts t2.fabricant
-puts t2.show_station
+h.add_train(t1)
 
-    Train.instance_of? PassangerTrain # вернёт true если train пассажирский
+
+station = Proc.new{ |s| puts s} #это вызов станций с поездами
+station.yield(k.to_s)
+station.yield(m.to_s)
+station.yield(d.to_s)
+station.yield(h.to_s)
+#puts RailwayStation.all_stations
+ 
+ h.block {|station,trains| puts station,trains}# это одна станция
+ 
+ t2.car{ |car| puts car} # это вагоны
+
+
+
+
+# Train.instance_of? PassangerTrain # вернёт true если train пассажирский
+# a = proc{ |x| puts x*2}
+# a.yield(100)
+# a.call(1,2,3,4)
+# c = lambda { |x| puts x  }
+# c.call(100) #ошибка только 1 аргумент
+# t2.far{|train| raise "train not Train.class" if !train.is_a?(Train)}

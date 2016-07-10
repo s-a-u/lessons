@@ -31,6 +31,10 @@ class RailwayStation
   def to_s
     "Станция #{@station} Поезд: #{@trains}"
   end
+  def block
+    yield(station,trains)
+  end
+  protected
   def validate!
    @trains.each {|train| raise "train not Train.class" if !train.is_a?(Train)}
     true
