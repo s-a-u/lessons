@@ -12,15 +12,17 @@ t2 = CargoTrain.new('ds3-q1')
 t2.add_car(CargoCar.new(100))
 t2.add_car(CargoCar.new(100))
 t1.add_car(PassCar.new(40))
-
+car =CargoCar.new(100)
+car.occupy_vol(150)
+puts car
 Train.find('d11-a2').class
 CargoTrain.find('ds3-q1')
 
 load 'railway_station.rb'
-k = RailwayStation.new(:Kiev)
-m = RailwayStation.new(:Minsk)
-d = RailwayStation.new(:Dnepr)
-h = RailwayStation.new(:Kharkov)
+k = RailwayStation.new('Kiev')
+m = RailwayStation.new('Minsk')
+d = RailwayStation.new('Dnepr')
+h = RailwayStation.new('Kharkov')
 k.class
 
 load 'route.rb'
@@ -41,9 +43,9 @@ station.yield(d.to_s)
 station.yield(h.to_s)
 #puts RailwayStation.all_stations
  
- h.block {|station,trains| puts station,trains}# это одна станция
+ h.each_train {|train| puts train}# это одна станция
  
- t2.car{ |car| puts car} # это вагоны
+ t2.each_car{|car| puts car} # это вагоны
 
 
 

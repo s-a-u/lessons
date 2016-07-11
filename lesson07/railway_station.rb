@@ -31,8 +31,9 @@ class RailwayStation
   def to_s
     "Станция #{@station} Поезд: #{@trains}"
   end
-  def block
-    yield(station,trains)
+  def each_train
+    @trains.each {|train| yield (train)}
+    
   end
   protected
   def validate!

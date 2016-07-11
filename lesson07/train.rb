@@ -68,10 +68,10 @@ class Train
     end
   end
   def to_s
-    "Поезд №#{@number}, #{self.type} (#{@cars} вагонов)"
+    "Поезд №#{@number}, #{self.type} (вагоны#{@cars})"
   end
-  def car
-    yield(cars)
+  def each_car
+    @cars.each {|car| yield(car)}
   end
   protected
   def validate!
