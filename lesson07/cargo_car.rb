@@ -1,23 +1,22 @@
 class CargoCar < Car
+  attr_reader :volume
+  attr_reader :load_vol
   def initialize(volume)
     @volume = volume 
     @load_vol = 0
     super
- end
+  end
   def type
     :cargo
   end
   def occupy_vol(vol)
-  	@load_vol = @load_vol + vol if vol < @volume
+  	@load_vol = @load_vol + vol if ((@load_vol + vol) <= @volume && vol>=0)
   end
   def free_vol(vol)
     @load_vol = @load_vol - vol
     raise 'invalid volume' if @load_volume < 0
   end
-  def load_vol
-  	@load_vol
-  end
   def to_s
-  "  #{@number} #{self.type}  Oбъем #{@volume} (#{@hold_vol} занятый объем)" 
+    "Поезд № #{@number} Тип #{self.type} Oбъем #{@volume} (#{@load_vol} занятый объем)" 
   end
 end

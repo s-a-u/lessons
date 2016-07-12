@@ -10,10 +10,10 @@
      :pass
    end 
    def occupy_seat
-     @hold_seats += 1 if 0 < @hold_seats < @seats
+     @hold_seats += 1 if ( @hold_seats>= 0 && @hold_seats <= @seats)
    end
    def free_seats
-     @hold_seats -=1 if 0 < @hold_seats < @seats
+     @hold_seats -= 1 if ( @hold_seats>= 0 && @hold_seats <= @seats)
    end
    def hold_seats
    	 @hold_seats

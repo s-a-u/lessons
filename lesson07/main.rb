@@ -12,6 +12,9 @@ t2 = CargoTrain.new('ds3-q1')
 t2.add_car(CargoCar.new(100))
 t2.add_car(CargoCar.new(100))
 t1.add_car(PassCar.new(40))
+ t2.cars[0].occupy_vol(50)
+ t2.cars[1].occupy_vol(50)
+
 car =CargoCar.new(100)
 car.occupy_vol(150)
 puts car
