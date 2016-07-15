@@ -4,40 +4,50 @@ class RailwayStation
   @@instances = []
   class << self
     def all_stations
-      @@instances 
-    end 
+      @@instances
+    end
   end
-  def   initialize(station)
+  def initialize(station)
     @station = station
-    @trains =[]
-    @@instances << @station 
-  end 
+    @trains = []
+    @@instances << @station
+  end
+
   def add_train(train)
     @trains << train
     validate!
   end
+
   def pass_trains
-    @trains.select{|train| train.type == :pass }
+    @trains.select { |train| train.type == :pass }
   end
+
   def cargo_trains
-    @trains.select{|train| train.type == :cargo }
+    @trains.select { |train| train.type == :cargo }
   end
+
   def depart_train(train)!
     @trains.delete(train)
-  end	
+  end
+
   def show_trains
-    @trains.each {|train| puts train}
-  end	
+    @trains.each { |train| puts train }
+  end
+
   def to_s
     "Станция #{@station} Поезд: #{@trains}"
   end
+
   def each_train
-    @trains.each {|train| yield (train)}
-    
+    @trains.each { |train| yield train }
   end
+
   protected
+
   def validate!
-   @trains.each {|train| raise "train not Train.class" if !train.is_a?(Train)}
+    @trains.each do |train|
+      raise 'train not Train.class' unless train.is_a?(Train)
+    end
     true
   end
 end
