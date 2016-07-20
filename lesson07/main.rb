@@ -11,11 +11,11 @@ t2 = CargoTrain.new('ds3-q1')
 t2.add_car(CargoCar.new(100))
 t2.add_car(CargoCar.new(100))
 t1.add_car(PassCar.new(40))
-t2.cars[0].occupy_vol(50)
+t2.cars[0].occupy_vol(5)
 t2.cars[1].occupy_vol(50)
 
-car = CargoCar.new(100)
-car.occupy_vol(150)
+car = CargoCar.new(101)
+car.occupy_vol(100)
 puts car
 Train.find('d11-a2').class
 CargoTrain.find('ds3-q1')
@@ -48,3 +48,34 @@ t2.each_car { |c| puts c }
 # c = lambda { |x| puts x  }
 # c.call(100)
 # t2.far{|train| raise "train not Train.class" if !train.is_a?(Train)}
+load 'module.rb'
+test = Test.new
+puts Test.instance_eval('@@seats')
+
+Test.class_eval do 
+	def m
+		puts 'hello'
+	end
+end
+test.m
+
+MyAttrAccessor.module_eval do
+	def module_method
+		puts 'modern method'
+	end
+end
+
+ # puts MyAttrAccessor.module_eval('@@seats')
+ test.module_method
+puts Test.class_variable_get :@@seats
+puts Test.class_variable_set :@@s,45
+puts Test.class_variables
+puts test.instance_variable_set :@z,58
+# only this object
+puts  test.my_attr = 5
+test.a =2
+test.b =3
+test.c =4
+puts test
+puts test.instance_variables
+puts test.a,test.b,test.c

@@ -6,9 +6,9 @@ class Train
   attr_accessor :station_index
   attr_accessor :cars
   NUMBER_FORMAT = /^[a-zA-Z\d]{3}-?[a-zA-Z\d]{2}$/
+  @@numbers = []
   class << self
-    def find(numb)
-      @@numbers = []
+    def find(numb)      
       @@numbers.select { |k| k.number == numb }[0]
     end
   end
