@@ -10,6 +10,7 @@ load 'cargo_car.rb'
 
 t1 = PassangerTrain.new('d11-a2')
 t2 = CargoTrain.new('ds3-q1')
+t2 = CargoTrain.new('ds3') # 'number wrong format'- проверка
 t2.add_car(CargoCar.new(100))
 t2.add_car(CargoCar.new(100))
 t1.add_car(PassCar.new(40))

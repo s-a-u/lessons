@@ -18,13 +18,16 @@ class Train
     @number = number
     @cars = []
     @speed = 0
+    validate!
     @@numbers << self
   end
-  def add_car(car)
+
+  begin
+    def add_car(car)
       raise 'car is not Car.class' unless car.is_a?(Car)
       return unless speed == 0
       @cars << car if type == car.type
-  end
+    end
   end
   def del_car(car)
     @cars.delete(car) if speed == 0
@@ -71,6 +74,7 @@ class Train
   def each_car
     @cars.each { |car| yield(car) }
   end
+end
 
 # def  cars (car,&block)
 #   block.call(car)
