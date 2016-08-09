@@ -1,9 +1,9 @@
 class CreateRoutes < ActiveRecord::Migration
   def change
     create_table :routes do |t|
-      t.string :number
+      t.string :title
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
