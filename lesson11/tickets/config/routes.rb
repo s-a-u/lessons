@@ -4,6 +4,12 @@ Rails.application.routes.draw do
 
   root'routes#index'
 
+  resources :railway_stations
+
+  resources :trains
+
+  resources :tickets
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

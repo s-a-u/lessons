@@ -1,0 +1,14 @@
+<%= form_for(train) do |f| %>
+
+    <%= render 'common/errors', resourse: @train %>
+
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "#{ @train.new_record? ? 'create' :'edit'}" %>
+  </div>
+<% end %>
