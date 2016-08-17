@@ -43,7 +43,6 @@ class TrainsController < ApplicationController
     @train.destroy
     respond_to do |format|
       format.html { redirect_to trains_url, notice: 'Train was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
@@ -55,6 +54,6 @@ class TrainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def train_params
-      params.require(:train).permit(:number)
+      params.require(:train).permit(:number, :route_id)
     end
 end

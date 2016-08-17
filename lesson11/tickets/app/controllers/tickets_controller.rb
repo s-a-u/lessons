@@ -2,7 +2,7 @@ class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
   def index
-    @ticket = Ticket.all
+    @tickets = Ticket.all
   end
 
   def show
@@ -34,7 +34,7 @@ class TicketsController < ApplicationController
   end
 
   def destroy
-    @ticket.destroy
+    @ticket . destroy
     redirect_to tickets_path
   end
 
@@ -44,7 +44,7 @@ class TicketsController < ApplicationController
     @ticket = Ticket.find(params[:id])
   end
 
-  def route_params
-    params.require(:ticket).permit(:title)
+  def ticket_params
+    params.require(:ticket).permit(:id)
   end
 end

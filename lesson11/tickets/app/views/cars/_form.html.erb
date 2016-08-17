@@ -1,0 +1,19 @@
+
+<%= form_for(@car) do |f| %>
+    <%= render 'common/errors', resourse:@car %>
+
+    <div class="field">
+      <%= f.label :type %><br>
+      <%= f.text_field :type %>
+    </div>
+
+    <div class="field">
+      <%= f.label :train_ids, "Train for addition" %>
+      <%= f.collection_select :train_ids, Train.all, :id, :number, {},{multiple: true } %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit "#{ @car.new_record? ? 'Create' : 'Update'}"%>
+    </div>
+<% end %>

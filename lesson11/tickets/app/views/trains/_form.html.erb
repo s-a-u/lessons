@@ -8,7 +8,17 @@
     <%= f.text_field :number %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "#{ @train.new_record? ? 'create' :'edit'}" %>
+    <div class="field">
+      <%= f.label :route, "Current Route" %>
+      <%= f.collection_select :route_id, Route.all, :id, :title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :car, " Add Car" %>
+      <%= f.collection_select :car_id, Car.all, :id, :type %>
+    </div>
+
+    <div class="actions">
+    <%= f.submit "#{ @train.new_record? ? 'create_train' :'edit_train'}" %>
   </div>
 <% end %>

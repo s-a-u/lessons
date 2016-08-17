@@ -5,5 +5,23 @@
   <%= @train.number %>
 </p>
 
+<p>
+  <srtong>At Route :</srtong>
+  <% if @train.current_route.present? %>
+  <%= @train.current_route.title %>
+      <% else %>
+  unknown_route
+      <% end %>
+</p>
+
+<p>
+  <srtong>Car :</srtong>
+  <% if @train.car.present? %>
+      <%= @train.car.type %>
+  <% else %>
+      unknown_route
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
