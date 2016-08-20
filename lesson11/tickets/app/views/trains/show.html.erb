@@ -16,10 +16,10 @@
 
 <p>
   <srtong>Car :</srtong>
-  <% if @train.car.present? %>
-      <%= @train.car.type %>
+  <% if @train.cars.present? %>
+      <%= @train.cars.car_type %>
   <% else %>
-      unknown_route
+      unknown_car_type
   <% end %>
 </p>
 

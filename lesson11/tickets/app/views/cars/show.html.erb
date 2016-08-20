@@ -1,22 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>car Stations:</strong>
-  <%= @car.type %>
-</p>
-
-<p>
-  <% if @car.type.empty? %>
-      List empty
-  <% else %>
-    <ul>
-      <% @route.type.each do |station| %>
-          <li><%=  station.title %></li>
-      <% end %>
-    </ul>
-<% end %>
+  <strong>Car Type:</strong>
+  <%= @car.car_type %>
 </p>
 
 
-<%= link_to 'Edit', edit_car_path(@route) %> |
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

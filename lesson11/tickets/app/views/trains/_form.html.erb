@@ -15,7 +15,12 @@
 
     <div class="field">
       <%= f.label :car, " Add Car" %>
-      <%= f.collection_select :car_id, Car.all, :id, :type %>
+      <%= f.collection_select :car_id, Car.all, :id, :car_type %>
+    </div>
+
+    <div class="field">
+      <%= f.label :ticket, " Ticket" %>
+      <%= f.collection_select :ticket_id, Ticket.all, :id, :user_id %>
     </div>
 
     <div class="actions">

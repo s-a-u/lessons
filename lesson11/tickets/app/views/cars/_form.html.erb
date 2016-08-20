@@ -3,17 +3,26 @@
     <%= render 'common/errors', resourse:@car %>
 
     <div class="field">
-      <%= f.label :type %><br>
-      <%= f.text_field :type %>
+      <%= f.label :car_type %><br>
+      <%= f.text_field :car_type %>
     </div>
 
     <div class="field">
-      <%= f.label :train_ids, "Train for addition" %>
-      <%= f.collection_select :train_ids, Train.all, :id, :number, {},{multiple: true } %>
+      <%= f.label :upper_seats %><br>
+      <%= f.text_field :upper_seats %>
     </div>
 
+    <div class="field">
+      <%= f.label :lower_seats %><br>
+      <%= f.text_field :lower_seats %>
+    </div>
 
-    <div class="actions">
+    <div class="field">
+      <%= f.label :train, "Train" %><br>
+      <%= f.collection_select :train_id, Train.all, :id, :number %>
+    </div>
+
+       <div class="actions">
       <%= f.submit "#{ @car.new_record? ? 'Create' : 'Update'}"%>
     </div>
 <% end %>
