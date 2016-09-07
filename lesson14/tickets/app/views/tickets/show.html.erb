@@ -2,7 +2,6 @@
 
 <p>
   <strong>Ticket:</strong>
-  <%= @ticket.user.name if @ticket.user %>
   <%= @ticket.train.number if @ticket.train %>
   <%= @ticket.first_station.title if @ticket.first_station %>
   <%= @ticket.latest_station.title if @ticket.latest_station  %>

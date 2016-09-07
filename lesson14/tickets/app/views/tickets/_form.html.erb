@@ -1,6 +1,10 @@
 
 <%= form_for(@ticket) do |f| %>
     <%= render 'common/errors', resourse:@ticket %>
+    <div class="field">
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name %>
+    </div>
 
     <div class="field">
       <%= f.label :user_id %><br>
@@ -21,7 +25,8 @@
       <%= f.label :latest_station, "Latest Station" %>
       <%= f.collection_select :latest_station_id, RailwayStation.all, :id, :title %>
     </div>
-       <div class="actions">
+
+    <div class="actions">
       <%= f.submit %>
     </div>
 <% end %>
