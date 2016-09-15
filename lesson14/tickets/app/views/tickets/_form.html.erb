@@ -5,6 +5,10 @@
       <%= f.label :user_name %>
       <%= f.text_field :user_name %>
     </div>
+    <div class="field">
+      <%= f.label :user_name, "Ticket" %><br>
+      <%= f.collection_select :user_name, Ticket.all, :id, :user_name %>
+    </div>
 
     <div class="field">
       <%= f.label :user_id %><br>
