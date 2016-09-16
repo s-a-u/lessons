@@ -13,6 +13,11 @@
     </div>
 
     <div class="field">
+      <%= f.label :user_name, "User name" %>
+      <%= f.text_field :user_name %>
+    </div>
+
+    <div class="field">
       <%= f.label :first_station, "First Station" %>
       <%= f.collection_select :first_station_id, RailwayStation.all, :id, :title %>
     </div>
