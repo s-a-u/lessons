@@ -35,7 +35,7 @@ class CarsController < ApplicationController
 
   def destroy
     @car.destroy
-    redirect_to cars_path
+    redirect_to '/cars'
   end
 
   private
@@ -45,6 +45,6 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:id,:car_type)
+    params.require(:car).permit(:id,:car_type, :train_id)
   end
 end

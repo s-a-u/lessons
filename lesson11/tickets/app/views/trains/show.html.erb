@@ -7,8 +7,8 @@
 
 <p>
   <strong>At Route :</strong>
-  <% if @train.route_id.present? %>
-  <%= @train.route_id %>
+  <% if @train.route.present? %>
+  <%= @train.route.title %>
       <% else %>
   unknown_route
       <% end %>
