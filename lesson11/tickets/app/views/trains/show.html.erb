@@ -7,17 +7,19 @@
 
 <p>
   <strong>At Route :</strong>
+  <%= @train.route.title if @train.route.present?%>
   <% if @train.route.present? %>
-  <%= @train.route.title %>
-      <% else %>
+
+  <% else %>
   unknown_route
       <% end %>
 </p>
 
 <p>
   <strong>Car :</strong>
-  <% if @train.car_id.present? %>
-      <%= @train.car.car_type %>
+  <%= @train.car_number %>
+  <% if @train.car_ids.present? %>
+      <%= @train.car_number %>
   <% else %>
       unknown_car_type
   <% end %>
@@ -26,7 +28,7 @@
 <p>
 <strong>Ticket :</strong>
 <% if @train.ticket_id.present? %>
-    <%= @train.ticket._id %>
+    <%= @train.ticket_id %>
 <% else %>
     unknown_ticket
 <% end %>

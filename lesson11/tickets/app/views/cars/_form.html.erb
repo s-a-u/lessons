@@ -4,7 +4,12 @@
 
     <div class="field">
       <%= f.label :car_type %><br>
-      <%= f.select :car_type, [['Купе', 'coupe'], ['Плацкарт','platskart']] %>
+      <%= f.select :car_type, [['Купе', 'coupe'], ['Плацкарт','platskart'],['СВ','SV'],['Сидячий','bucket_seats']] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :number %><br>
+      <%= f.text_field :number %>
     </div>
 
     <div class="field">
@@ -15,6 +20,21 @@
     <div class="field">
       <%= f.label :lower_seats %><br>
       <%= f.text_field :lower_seats %>
+    </div>
+
+    <div class="field">
+      <%= f.label :side_upper_seats %><br>
+      <%= f.text_field :side_upper_seats %>
+    </div>
+
+    <div class="field">
+      <%= f.label :side_lower_seats %><br>
+      <%= f.text_field :side_lower_seats %>
+    </div>
+
+    <div class="field">
+    <%= f.label :bucket_seats %><br>
+    <%= f.text_field :bucket_seats %>
     </div>
 
     <div class="field">
