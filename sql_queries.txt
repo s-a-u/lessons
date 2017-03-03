@@ -1,0 +1,26 @@
+
+-- 1
+select distinct status from tasks order by status;
+
+-- 2
+select project_id, count(*) as tasks_count from tasks group by project_id order by tasks_count desc;
+
+-- 3
+select projects.name, count(*) from projects 
+inner join tasks on projects.id = tasks.project_id
+group by projects.id order by projects.name;
+
+-- 4
+select t.* from tasks t inner join projects p on t.project_id = p.id
+where p.name like "N%";
+
+-- 5
+select p.*, count(t.id) from projects p left join tasks t on p.id = t.project_id 
+where p.name like '%a%' group by p.id;
+
+-- 6
+select tasks.name, count(*) as cnt from tasks group by name having cnt > 1 order by name;
+
+-- 8
+select p.*, count(*) as cnt from projects p inner join tasks t on p.id = t.project_id
+where t.status = 'completed' group by p.id having cnt > 10 order by p.id;
