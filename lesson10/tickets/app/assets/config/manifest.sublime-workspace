@@ -1,0 +1,411 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"validate",
+				"validate_rules"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"na",
+				"names"
+			],
+			[
+				"si",
+				"Simbol"
+			],
+			[
+				"modu",
+				"module_method"
+			],
+			[
+				"clas",
+				"class_eval"
+			],
+			[
+				"v",
+				"volume"
+			],
+			[
+				"l",
+				"load_vol"
+			],
+			[
+				"o",
+				"occupy_vol"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"tr",
+				"trains"
+			],
+			[
+				"h",
+				"hold_seats"
+			],
+			[
+				"Pa",
+				"PassCar"
+			],
+			[
+				"sea",
+				"seats"
+			],
+			[
+				"C",
+				"CargoCar"
+			],
+			[
+				"vol",
+				"volume"
+			],
+			[
+				"sta",
+				"stations"
+			],
+			[
+				"ra",
+				"raise"
+			],
+			[
+				"valid",
+				"validate"
+			],
+			[
+				"stat",
+				"station"
+			],
+			[
+				"be",
+				"begin	begin … rescue … end"
+			],
+			[
+				"va",
+				"validate"
+			],
+			[
+				"F",
+				"Fabricant"
+			],
+			[
+				"fa",
+				"fabric"
+			],
+			[
+				"fbr",
+				"fabricant"
+			],
+			[
+				"n",
+				"number"
+			],
+			[
+				"nu",
+				"numb"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"su",
+				"super"
+			],
+			[
+				"Car",
+				"CargoCarriage"
+			],
+			[
+				"cars",
+				"cars"
+			],
+			[
+				"st",
+				"station"
+			],
+			[
+				"station",
+				"station_index"
+			],
+			[
+				"tra",
+				"train"
+			],
+			[
+				"la",
+				"latest_station"
+			],
+			[
+				"train_",
+				"train_cargo"
+			],
+			[
+				"co",
+				"container"
+			],
+			[
+				"sho",
+				"show_current_speed"
+			],
+			[
+				"p",
+				"product"
+			],
+			[
+				"prod",
+				"products"
+			],
+			[
+				"mon",
+				"months"
+			],
+			[
+				"am",
+				"asm	assert_match(..)"
+			],
+			[
+				"s",
+				"sum"
+			],
+			[
+				"to",
+				"to_a"
+			],
+			[
+				"m",
+				"month"
+			],
+			[
+				"le",
+				"letter"
+			],
+			[
+				"mo",
+				"months"
+			],
+			[
+				"i",
+				"index"
+			],
+			[
+				"wh",
+				"while	while ... end"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/serhey/ror/lessons/lesson09/main.rb",
+		"/home/serhey/ror/lessons/lesson09/module.rb",
+		"/home/serhey/ror/lessons/lesson07/route.rb",
+		"/home/serhey/ror/lessons/lesson07/cargo_train.rb",
+		"/home/serhey/ror/lessons/lesson07/module.rb",
+		"/home/serhey/ror/lessons/lesson07/train.rb",
+		"/home/serhey/ror/lessons/lesson07/railway_station.rb",
+		"/home/serhey/ror/lessons/lesson07/car.rb",
+		"/home/serhey/ror/lessons/lesson07/pass_car.rb",
+		"/home/serhey/ror/lessons/lesson07/cargo_car.rb",
+		"/home/serhey/ror/lessons/lesson07/main.rb",
+		"/home/serhey/ror/lessons/lesson07/passanger_train.rb",
+		"/home/serhey/ror/lessons/lesson06/main.rb",
+		"/home/serhey/ror/lessons/lesson05/main.rb",
+		"/home/serhey/ror/lessons/lesson05/Route.rb",
+		"/home/serhey/ror/lessons/lesson05/RailwayStation.rb",
+		"/home/serhey/ror/lessons/lesson05/Train.rb",
+		"/home/serhey/ror/lessons/lesson05/Car.rb",
+		"/home/serhey/ror/lessons/lesson05/Module.rb",
+		"/home/serhey/ror/lessons/lesson05/PassangerTrain.rb",
+		"/home/serhey/ror/lessons/lesson05/CargoTrain.rb",
+		"/home/serhey/ror/lessons/lesson04/Train.rb",
+		"/home/serhey/ror/lessons/lesson04/main.rb",
+		"/home/serhey/ror/lessons/lesson04/PassangerTrain.rb",
+		"/home/serhey/ror/lessons/lesson04/CargoTrain.rb",
+		"/home/serhey/ror/lessons/lesson04/PassCar.rb",
+		"/home/serhey/ror/lessons/lesson04/CargoCar.rb",
+		"/home/serhey/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/serhey/ror/lessons/lesson04/RailwayStation.rb",
+		"/home/serhey/ror/lessons/lesson04/config.rb",
+		"/home/serhey/ror/lessons/lesson04/Car.rb",
+		"/home/serhey/ror/lessons/lesson04/CargoCarriage.rb",
+		"/home/serhey/ror/lessons/lesson04/PassangerCarriage.rb",
+		"/home/serhey/ror/lessons/lesson03/RailwayStation.rb",
+		"/home/serhey/ror/lessons/lesson03/Route.rb",
+		"/home/serhey/ror/lessons/lesson03/main.rb",
+		"/home/serhey/ror/lessons/lesson03/train.rb",
+		"/home/serhey/ror/lessons/lesson02/task6.rb",
+		"/home/serhey/ror/lessons/lesson02/task3.rb",
+		"/home/serhey/ror/lessons/lesson02/task5.rb",
+		"/home/serhey/ror/lessons/lesson02/task4.rb",
+		"/home/serhey/ror/lessons/lesson02/task1.rb",
+		"/home/serhey/ror/lessons/lesson02/task2.rb",
+		"/home/serhey/ror/lessons/lesson01/task2.rb",
+		"/home/serhey/ror/lessons/lesson01/task1.rb",
+		"/home/serhey/ror/lessons/lesson01/task3.rb",
+		"/home/serhey/hello.rb"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"validate",
+			"  	\n",
+			"add_train",
+			"end"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "manifest.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

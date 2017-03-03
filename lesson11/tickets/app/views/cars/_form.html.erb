@@ -1,0 +1,28 @@
+
+<%= form_for(@car) do |f| %>
+    <%= render 'common/errors', resourse:@car %>
+
+    <div class="field">
+      <%= f.label :car_type %><br>
+      <%= f.select :car_type, [['Купе', 'coupe'], ['Плацкарт','platskart']] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :upper_seats %><br>
+      <%= f.text_field :upper_seats %>
+    </div>
+
+    <div class="field">
+      <%= f.label :lower_seats %><br>
+      <%= f.text_field :lower_seats %>
+    </div>
+
+    <div class="field">
+      <%= f.label :train, "Train" %><br>
+      <%= f.collection_select :train_id, Train.all, :id, :number %>
+    </div>
+
+       <div class="actions">
+      <%= f.submit "#{ @car.new_record? ? 'Create' : 'Update'}"%>
+    </div>
+<% end %>
